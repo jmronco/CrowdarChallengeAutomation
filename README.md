@@ -62,11 +62,10 @@ Ojo: `mvn clean` borra la carpeta `target`, así que copia los reportes a otro l
 ## Estructura
 
 ```
-src/main/java/org/
+src/test/java/org/
   api/         Cliente HTTP para el servicio web
   constants/   Constantes (URLs, usuarios, mensajes)
   pages/       Page Objects (LoginPage, CartPage, BasePage)
   utils/       DriverFactory y ScreenshotUtil
-src/test/java/org/tests/
-  BaseTest, TestListener, SauceDemoTests, MercadoLibreApiTests
+  tests/       BaseTest, TestListener, SauceDemoTests, MercadoLibreApiTests
 ```

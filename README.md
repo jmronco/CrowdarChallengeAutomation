@@ -52,6 +52,16 @@ mvn clean test -Dbrowser=edge
 
 Si usas IntelliJ, puedes ejecutar la clase `SauceDemoTests` o `MercadoLibreApiTests` con el botón verde. Para elegir Edge, agrega `-Dbrowser=edge` en *VM options* de la configuración de ejecución.
 
+## Fallo intencional
+
+Como pide el reto, una prueba falla a propósito: `SauceDemoTests.invalidLogin`. Compara el mensaje de error del usuario bloqueado con un texto incorrecto (constante `LOCKED_USER_ERROR_MESSAGE` en `Constants.java`). Por eso `mvn test` termina con `BUILD FAILURE`: 5 pruebas, 1 fallo. Es lo esperado. Al fallar se guarda una captura de pantalla en `target/screenshots/`.
+
+Para verla en verde, cambia la constante por `"Epic sadface: Sorry, this user has been locked out."`.
+
+## Evidencias
+
+En `evidencias/` hay reportes y capturas de una ejecución en Chrome y otra en Edge.
+
 ## Dónde ver los resultados
 
 - Reportes: `target/surefire-reports/`. Abre `index.html` o `emailable-report.html` en el navegador. Los XML están en la misma carpeta (`testng-results.xml`).
